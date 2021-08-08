@@ -1,0 +1,87 @@
+*{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+#nav_ul li a{
+    text-decoration: none!important;
+    padding:10px 10px;
+    color: aliceblue;
+    
+}
+#nav_ul li{
+    overflow-y:hidden ;
+    border-radius: 10px!important;
+}
+#nav_ul li a:hover{
+    text-decoration: none!important;
+    color: rgb(11, 121, 218);
+    background-color: azure;
+    transition: 0.6s;
+}
+@media only screen and (min-width:992px){
+    #nav_ul :first-child a{
+        padding-left: 10px;
+    }
+    #booking img{
+        width: 600px;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    
+    #form_div{
+        margin:2% 30%!important;
+    }
+    #cars img{
+        width: 30px!important;
+        padding: 0;
+        margin:0;
+    }
+    .div_drag img{
+        width: 2px!important;
+        padding: 0!important;
+        margin:0!important;
+    }
+}
+@media only screen and (max-width:992px){
+    #nav_ul li{
+        margin: 10px 0px!important;
+    }
+    #car_all{
+        display: none;
+    }
+    
+    
+}
+#nav_div{
+    position: fixed;
+    width: 100%;
+}
+#form_div{
+    margin:5% 15%;
+    padding: 20px;
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    box-shadow: 4px 5px 6px #dadada;
+}
+#cars img{
+    width: 80px;
+}
+.div_drag img{
+    width: 80px!important;
+}
+.div_drag{
+    overflow-y: hidden ;
+    padding: 0px;
+}
+.fa:hover{
+    color: rgb(45, 156, 156);
+    transition: 0.7s!important;
+}
+button:hover{
+    transition: 0.7s!important;
+}
+#scroll_top:hover{
+    background-color: skyblue!important;
+    color: white;
+    transition: 0.4s;
+}

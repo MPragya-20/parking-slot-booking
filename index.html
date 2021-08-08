@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Slot Booking</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+<body>
+    <div id ="complete_div">
+        <div id ="nav_div" style="z-index: 3;">
+            <nav class="navbar navbar-expand-lg bg-info navbar-dark">
+                <a href="logo.jpg" ><img src="logo.jpg" alt="logo" style="width:80px;margin:0px 10px;"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseme" style="border:none!important"><span class="navbar-toggler-icon" ></span></button>
+                <div id ='collapseme' class="collapse navbar-collapse">
+                    <ul class="navbar-nav" id ="nav_ul"> 
+                        <li class="nav-item"> <a href="#hero">Home</a></li>
+                        <li class="nav-item"> <a href="#booking">Book slot</a></li>
+                        <li class="nav-item"> <a href="#footer">Contact us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    
+        <div id ="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(main.jpg);background-repeat: no-repeat;background-size: cover;height: 737px;width:100%;">
+            <div align="center">
+                <div align="center">
+                    <h4  style="overflow-y: hidden;color: azure;font-family: 'Quicksand', sans-serif; font-weight: bolder;text-align:center;margin-top: 200px;"><span style="font-size: 2rem;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Welcome</span> <br><br> to <img src="logo.jpg" alt="logo" style="width:60px;margin:0px 10px;"> slot booking center</h4>
+                </div>
+                <h5 style="overflow-y: hidden;color: azure;top: 350px;position: absolute;left:-100%;font-weight: lighter;font-size: 1.5rem;" class ="animate1"> Easy <i class="fa fa-arrow-right"></i></h5>
+                <h5 style="overflow-y: hidden;color: azure;top: 400px;position: absolute;left:100%;font-weight: lighter;font-size: 1.5rem;" class ="animate2"><i><i class="fa fa-arrow-left"></i> Secured</i></h5>
+                
+                <h5 style="overflow-y: hidden;color: azure;top: 450px;position: absolute;left:-100%;font-weight: lighter;font-size: 1.5rem;" class ="animate1">Quick service <i class="fa fa-arrow-right"></i></h5>
+                <h5 style="overflow-y: hidden;color: azure;top: 500px;position: absolute;left:100%;font-weight: lighter;font-size: 1.5rem;" class ="animate2"><i><i class="fa fa-arrow-left"></i> Guaranteed</i></h5>
+
+            </div>
+        </div>
+
+        <div id ="booking" style="background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.1)),url(back_car.jpg);background-size: cover;background-repeat: no-repeat;">
+            <div align="center" style="padding: 20px; background-color: bisque;margin-top: 5px; color: darkgrey;">
+                <h3 style="overflow-y: hidden;font-family: 'Atkinson Hyperlegible', sans-serif;">Book your slot here : </h3>
+            </div>
+            <div id ="form_div" style="background-color: rgba(46, 44, 131, 0.3)">
+                <form action="" method="POST" onsubmit="display()">
+                    <label for="fname" class="text-primary" style="font-weight: bold;">First Name</label>
+                    <input type="text"id ="fname" name="fname"placeholder="First Name" class="form-control"required>
+                    <br>
+                    <label for="lname" class="text-primary"style="font-weight: bold;">Last Name</label>
+                    <input type="text"id ="lname" name="lname"placeholder="Last Name" class="form-control"required>
+                    <br>
+                    <label for="v_name" class="text-primary"style="font-weight: bold;">Vehicle Name</label>
+                    <input type="text"id ="v_name" name="v_name"placeholder="Vehicle Name" class="form-control"required>
+                    <br>
+                    <label for="v_no" class="text-primary"style="font-weight: bold;">Vehicle Number</label>
+                    <input type="text"id ="v_no" name="v_no"placeholder="Vehicle Number" class="form-control"required>
+                    <br>
+                    <label for="options"class="text-primary"style="font-weight: bold;">If you are a mobile user, plz select the options <br>
+                    for your slot</label><br>
+                    <select id="slot" name="options" id="options" style="font-family: sans-serif; background-color: lightblue;padding: 5px;">
+                        <option disabled="disabled" selected = "true" value="">Choose your car slot</option>
+                        <option value="Slot 1A">Slot 1A</option>
+                        <option value="Slot 1A">Slot 2A</option>
+                        <option value="Slot 1A">Slot 3A</option>
+                        <option value="Slot 1A">Slot 4A</option>
+                        <option value="Slot 1A">Slot 5A</option>
+                        <option value="Slot 1A">Slot 6A</option>
+                        <option value="Slot 1A">Slot 7A</option>
+                        <option value="Slot 1A">Slot 8A</option>
+                    </select>
+                    
+                    <br><br><br>
+                    <div style="display: flex;justify-content: space-between;">
+                        <input type="submit" class="btn btn-info" value = "Save">
+                        <input type="reset" class="btn btn-warning" value = "Reset">
+                    </div>
+                </form>
+            </div>
+            <div id ="car_all">
+                <h5 style="padding: 20px;background-color: darkgray;margin: 0px 0px;border: 1px solid whitesmoke;">You can drag and drop any one of the cars in your suitable available slot(not applicable for touch screen users) to check your car position:</h5>
+
+            <div id="car_zone" style="background-color: aliceblue;padding: 50px;">
+                <div id ="cars_div" align="center" style="border: 1px solid #dadada;margin:5px 0px;border-radius: 10px;padding: 15px;background-color: lightyellow;box-shadow: 4px 5px 6px #dadada;">
+                    <div class="row" id ="cars">
+                        <div class="col-3" ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="20.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_1">
+                        </div>
+                        <div  class="col-3"ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="21.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_2">
+                        </div>
+                        <div class="col-3"ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="22.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_3">
+                        </div>
+                        <div  class="col-3"ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="23.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_4">
+                        </div>
+                    </div>
+                    <div class="row" id ="cars">
+                        <div class="col-3"ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="24.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_5">
+                        </div>
+                        <div  class="col-3"ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="25.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_6">
+                        </div>
+                        <div class="col-3"ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="26.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_7">
+                        </div>
+                        <div  class="col-3"ondrop="drop(event)" ondragover="allowDrop(event)">
+                            <img src="27.jpg" alt="" draggable="true" ondragstart="drag(event)"id ="drag_img_8">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <label for=""class="text-primary"style="font-weight: bold;">Parking Area<br><small>Drop your car here:</small></label>
+                
+                <div style="padding: 15px;margin: 0px;border-radius: 10px;">
+                    <div class="row">
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">1A</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">2A</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">3A</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">4A</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+                            
+                        </div>
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+    
+                        </div>
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+    
+                        </div>
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+    
+                        </div>
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+    
+                        </div>
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+    
+                        </div>
+                        <div ondrop="drop(event)" ondragover="allowDrop(event)"class="col-3 div_drag"style="width: 100px;height: 200px;border: 2px solid black;">
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">5A</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">6A</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">7A</h4>
+                        </div>
+                        <div class="col-3">
+                            <h4 style="overflow-y: hidden;">8A</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id ="footer" style="background-color: teal;padding: 100px 25px;color: thistle;">
+                <small>&copy; 2021 All rights reserved.</small><br>
+                <small>This website has been developed by Pragya Mukherjee.</small>
+                <br><br>
+                <div align="center"><a class="footer-social" href="https://linkedin.com/in/pragyamukherjee"target="_blank" style="color: white;"><i style="padding-right: 20px;" class="fa fa-linkedin" aria-hidden="true"></i></a><a href="https://github.com/MPragya-20" target="_blank" class="footer-social" style="color: white; padding-right: 20px;" ><i class="fa fa-github" aria-hidden="true"></i></a><a class="footer-social"href="https://images-na.ssl-images-amazon.com/images/I/61ZmA1UkQBL._AC_SL1000_.jpg"target="_blank" style="color: white;"><i style="padding-right: 20px;" class="fa fa-instagram" aria-hidden="true"></i></a><a class="footer-social" style="color: white;" href="https://images-na.ssl-images-amazon.com/images/I/61ZmA1UkQBL._AC_SL1000_.jpg" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></div>
+                <a href="#hero"><button id="scroll_top" style="background-color: crimson;border-radius: 30px;padding: 10px;box-shadow: 3px 4px 6px black;z-index: 3;">Scroll to top</button></a>          
+            </div>
+            
+
+        </div>
+
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
